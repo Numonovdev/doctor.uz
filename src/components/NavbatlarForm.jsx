@@ -9,7 +9,7 @@ const viloyatlar = {
 const kasalliklar = ['Gipertoniya', 'Diabet', 'Astma', 'Bosh og‘rig‘i'];
 const dorilar = ['Paracetamol', 'Insulin', 'Ventolin', 'Analgin'];
 
-export default function Navbatlar() {
+export default function NavbatlarForm() {
   const [bemor, setBemor] = useState({
     ism: '',
     familiya: '',
@@ -33,7 +33,6 @@ export default function Navbatlar() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Yuborilgan ma'lumot:", bemor);
-    // Bu yerda backendga yuborish (fetch/axios) bo'lishi mumkin
   };
 
   return (
@@ -42,7 +41,6 @@ export default function Navbatlar() {
         <h2 className="text-2xl font-bold mb-4">Yangi Bemor Qo‘shish</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <input name="ism" value={bemor.ism} onChange={handleChange} placeholder="Ism" className="input" />
             <input name="familiya" value={bemor.familiya} onChange={handleChange} placeholder="Familiya" className="input" />

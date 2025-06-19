@@ -1,6 +1,7 @@
-import React from 'react';
+
 import { FaUserInjured, FaVial, FaCalendarCheck, FaUserMd, FaHome } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import NavbatlarForm from '../components/NavbatlarForm';
 
 export default function Navbatlar() {
  const navigate = useNavigate();
@@ -50,8 +51,7 @@ export default function Navbatlar() {
 
       {/* Main content */}
       <main className="flex-1 p-10">
-        
-      <Navbatlar/>
+      <NavbatlarForm/>
       </main>
     </div>
   );
